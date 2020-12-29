@@ -12,10 +12,14 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatOptionModule } from '@angular/material/core';
+import { HighlightPipe } from './highlight-pipe';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HighlightPipe
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,9 @@ import { MatOptionModule } from '@angular/material/core';
     MatAutocompleteModule,
     MatOptionModule
   ],
-  providers: [],
+  providers: [
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

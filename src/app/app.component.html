@@ -36,7 +36,8 @@
     </mat-chip-list>
     <mat-autocomplete #fruitsAutocomplete="matAutocomplete" (optionSelected)="selectFruit($event);">
       <mat-option *ngFor="let fruit of filteredFruits$ | async" [value]="fruit">
-        {{fruit.name}}
+        <span [innerHTML]="fruit.name | highlight: toHighlight"></span>
+  
       </mat-option>
     </mat-autocomplete>
     <mat-error>At least 1 fruit need to be added</mat-error>

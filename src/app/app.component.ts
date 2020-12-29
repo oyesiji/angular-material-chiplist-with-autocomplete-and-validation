@@ -28,6 +28,8 @@ export class AppComponent implements OnInit {
   public addOnBlur = true;
   public userForm: FormGroup;
   public user: User;
+  toHighlight: string = '';
+
   public fruits = [
     { id: 1, name: 'lemon' },
     { id: 2, name: 'lime' },
@@ -122,6 +124,7 @@ export class AppComponent implements OnInit {
 
   private fruitFilter(value: any): Fruit[] {
     const filterValue = (value === null || value instanceof Object) ? '' : value.toLowerCase();
+    this.toHighlight = filterValue;
     const matches = this.fruits.filter(fruit =>
       fruit.name.toLowerCase().includes(filterValue));
     const formValue = this.userForm.get('fruits').value;
