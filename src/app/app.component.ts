@@ -35,7 +35,12 @@ export class AppComponent implements OnInit {
     { id: 2, name: 'lime' },
     { id: 3, name: 'orange' },
     { id: 4, name: 'strawberry' },
-    { id: 5, name: 'raspberry' }];
+    { id: 5, name: 'raspberry' },
+    { id: 6, name: 'lemon7' },
+    { id: 7, name: 'lemon8' },
+    { id: 8, name: 'lemon9' },
+  
+  ];
   public filteredFruits$: Observable<Fruit[]>;
 
   @ViewChild('fruitList') fruitList: MatChipList;
